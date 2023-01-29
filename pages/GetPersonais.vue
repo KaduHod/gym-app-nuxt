@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import Input from '../components/Input.vue';
+    definePageMeta({
+        layout:'app'
+    })
 </script>
 <template>
     <div class="flex flex-col w-full h-screen justify-around   items-center">
