@@ -1,0 +1,13 @@
+services:
+  app:
+    working_dir: /usr/app/gym-app
+    container_name: gym-app-nuxt 
+    hostname: gym-app-nuxt
+    ports: 
+      - 24600:24600
+      - 3000:3000
+    build: 
+      context: . 
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/app/gym-app
