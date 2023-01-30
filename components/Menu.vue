@@ -8,10 +8,10 @@ let active = ref<boolean>(true)
     <div class="block absolute w-40 pt-4 cursor-pointer" style="z-index:100" @click="active = !active">
         <div class="flex flex-col w-full items-center p-3" :class="{hidden: !active}">
             <svg viewBox="10 0 100 80" width="40" height="40">
-              <rect width="80" height="6"></rect>
-              <rect y="25" width="80" height="6"></rect>
-              <rect y="50" width="80" height="6"></rect>
-            </svg>
+                <rect width="80" height="6"></rect>
+                <rect y="25" width="80" height="6"></rect>
+                <rect y="50" width="80" height="6"></rect>
+            </svg>            
         </div>
         <div class="flex flex-col w-full items-center p-2" :class="{hidden: active}">
             <svg 

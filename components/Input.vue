@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { emit } from 'process';
+
 const props = defineProps({
     placeholder: {
         type: String, 
@@ -7,8 +9,19 @@ const props = defineProps({
     type: {
         type: String,
         required: true
+    },
+    name: {
+        type: String,
+        required: false
+    },
+    emitFunction : {
+        type: String,
+        required: false
     }
 })
+
+const data = ref()
+
 </script>
 
 <template>
@@ -21,5 +34,5 @@ const props = defineProps({
             outline-0 
             bg-gray-100 
             hover:cursor-pointer
-        " :type="type" :placeholder="placeholder">
+        " :type="type" @input="$emit(emitFunction ?? '', data)" v-model="data" :placeholder="placeholder" :name="name ?? ''">
 </template>
